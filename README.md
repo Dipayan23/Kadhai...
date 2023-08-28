@@ -75,6 +75,8 @@ Figma is a collaborative design tool used to create interactive and visually app
 Combine the developed Flutter app with the UI/UX designs from Figma by referring to the prototypes and design guidelines. Implement the visual elements, animations, and interactions as per the Figma designs to create a polished and user-friendly homemade food delivery app.
 
 ## SCREENSHOT OF THE GIVEN APP FOR REFERENCE
+![kadhai app 11_page-0001](https://github.com/Dipayan23/Kadhai.../assets/129957226/acec68e7-4172-43b9-b867-bb46de42d2f1)
+
 
 ## PPT PRESENTATION OF GIVEN APP 
 DOWNLOAD IT FOR FULL INFORMATION RELATED TO THE APP 
