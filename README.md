@@ -80,4 +80,6 @@ Combine the developed Flutter app with the UI/UX designs from Figma by referring
 
 ## PPT PRESENTATION OF GIVEN APP 
 DOWNLOAD IT FOR FULL INFORMATION RELATED TO THE APP 
+[KADHAI.PPT.pdf](https://github.com/Dipayan23/Kadhai.../files/12454163/KADHAI.PPT.pdf)
+
 
