@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:kadhai/screens/Dishes%20screen/biryani_description.dart';
 
-import 'package:kadhai/screens/log_screens/signUp_screen.dart';
 import 'package:kadhai/screens/log_screens/signin_screen.dart';
 import 'package:kadhai/screens/log_screens/verification_screen.dart';
 import 'package:kadhai/screens/log_screens/welcome_screens.dart';
@@ -39,12 +38,11 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      initialRoute: main_page.id,
+      initialRoute: welcome_screen.id,
       routes: {
         biryani_page.id: (context) => biryani_page(),
         profile_page.id: (context) => profile_page(),
         verification_screen.id: (context) => verification_screen(),
-        signUp_screen.id: (context) => signUp_screen(),
         welcome_screen.id: (context) => welcome_screen(),
         signin_page.id: (context) => signin_page(),
         main_page.id: (context) => main_page(),
@@ -56,7 +54,7 @@ class MyApp extends StatelessWidget {
         biryani_page.id: (context) => biryani_page(),
         biryani_description.id: (context) => biryani_description(),
         preferre_menu.id: (context) => preferre_menu(),
-        meal_menu.id: (context) => main_menu(),
+        meal_menu.id: (context) => meal_menu(),
         disount_page.id: (context) => disount_page(),
       },
     );

@@ -53,7 +53,7 @@ class _biryani_pageState extends State<biryani_page> {
                   },
                   star: '3.9',
                   image: 'images/dal makhani 1',
-                  res_name: 'Maa Tara Resturent',
+                  res_name: '',
                 ),
                 resturent_button(
                   onTap: () {},

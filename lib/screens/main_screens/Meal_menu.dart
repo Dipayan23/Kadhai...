@@ -21,7 +21,7 @@ class _meal_menuState extends State<meal_menu> {
       appBar: AppBar(
         backgroundColor: Colors.transparent,
         title: Center(
-          child: Text('Main Dishes'),
+          child: Text('Meal Offers'),
         ),
         actions: [
           IconButton(
@@ -48,19 +48,12 @@ class _meal_menuState extends State<meal_menu> {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     dish_button(
-                        image: 'images/biryani.jpg',
+                        image: 'images/veg.jpg',
                         onTap: () {
-                          Navigator.pushNamed(context, idli_page.id);
+                          
                         },
-                        dish_name: 'Biryani'),
-                    Container(
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(20),
-                        color: Colors.grey,
-                      ),
-                      height: 250,
-                      width: 150,
-                    ),
+                        dish_name: 'Veg Thali'),
+                   dish_button(image: 'images/nonveg.jpg', onTap: (){}, dish_name: 'Non Veg Thali'),
                   ],
                 ),
               ),

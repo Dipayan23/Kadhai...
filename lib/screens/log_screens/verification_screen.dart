@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:kadhai/components/resendOTP.dart';
 import 'package:kadhai/components/textfield.dart';
-import 'package:kadhai/screens/log_screens/signUp_screen.dart';
 import 'package:kadhai/screens/log_screens/signin_screen.dart';
 import 'package:kadhai/screens/main_screens/main_page.dart';
 
@@ -32,6 +31,7 @@ class _verification_screenState extends State<verification_screen> {
         ),
       ),
       child: Scaffold(
+        resizeToAvoidBottomInset: false,
         backgroundColor: Colors.transparent,
         body: SafeArea(
           child: Column(
@@ -42,7 +42,7 @@ class _verification_screenState extends State<verification_screen> {
               Image(
                 image: AssetImage('images/kadhai.png'),
               ),
-
+    
               //Welcome  text
               Text(
                 "Verification Code",
@@ -53,7 +53,7 @@ class _verification_screenState extends State<verification_screen> {
                   fontSize: 30,
                 )),
               ),
-
+    
               //verification box
               Container(
                 width: 300,
@@ -77,7 +77,7 @@ class _verification_screenState extends State<verification_screen> {
                               PhoneAuthProvider.credential(
                                   verificationId: signin_page.verify,
                                   smsCode: oTP_controller.text);
-
+    
                           // Sign the user in (or link) with the credential
                           await auth.signInWithCredential(credential);
                           Navigator.pushNamed(context, main_page.id);
@@ -89,10 +89,8 @@ class _verification_screenState extends State<verification_screen> {
                   ],
                 ),
               ),
-
-              SizedBox(
-                height: 60,
-              ),
+    
+             
               //image
               Image(
                 image: AssetImage('images/kolkata.png'),

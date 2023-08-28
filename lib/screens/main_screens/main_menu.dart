@@ -54,14 +54,7 @@ class _main_menuState extends State<main_menu> {
                           Navigator.pushNamed(context, idli_page.id);
                         },
                         dish_name: 'Biryani'),
-                    Container(
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(20),
-                        color: Colors.grey,
-                      ),
-                      height: 250,
-                      width: 150,
-                    ),
+                   dish_button(image: 'images/dal makhani 1.jpg', onTap: (){}, dish_name: 'Dal Makhani'),
                   ],
                 ),
               ),

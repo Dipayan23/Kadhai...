@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:kadhai/screens/profile_screens/wishlist_page.dart';
+import 'package:like_button/like_button.dart';
 
 class biryani_description extends StatefulWidget {
   const biryani_description({super.key});
@@ -12,6 +14,7 @@ class biryani_description extends StatefulWidget {
 }
 
 class _biryani_descriptionState extends State<biryani_description> {
+  int count=1;
   @override
   Widget build(BuildContext context) {
     double screen_width = MediaQuery.of(context).size.width;
@@ -198,39 +201,28 @@ class _biryani_descriptionState extends State<biryani_description> {
                         Padding(
                           padding: const EdgeInsets.all(15.0),
                           child: Container(
-                            child: Image(image: AssetImage('images/food.png')),
+                            child: Image(image: AssetImage('images/rice.jpg')),
                           ),
                         ),
                         Padding(
                           padding: const EdgeInsets.all(15.0),
                           child: Container(
-                            child: Image(image: AssetImage('images/food.png')),
+                            child: Image(image: AssetImage('images/potato.jpg')),
                           ),
                         ),
                         Padding(
                           padding: const EdgeInsets.all(15.0),
                           child: Container(
-                            child: Image(image: AssetImage('images/food.png')),
+                            child: Image(image: AssetImage('images/egg.jpg')),
                           ),
                         ),
                         Padding(
                           padding: const EdgeInsets.all(15.0),
                           child: Container(
-                            child: Image(image: AssetImage('images/food.png')),
+                            child: Image(image: AssetImage('images/spices.jpg')),
                           ),
                         ),
-                        Padding(
-                          padding: const EdgeInsets.all(15.0),
-                          child: Container(
-                            child: Image(image: AssetImage('images/food.png')),
-                          ),
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.all(15.0),
-                          child: Container(
-                            child: Image(image: AssetImage('images/food.png')),
-                          ),
-                        ),
+                        
                       ],
                     ),
                   ),
@@ -254,39 +246,16 @@ class _biryani_descriptionState extends State<biryani_description> {
                         Padding(
                           padding: const EdgeInsets.all(15.0),
                           child: Container(
-                            child: Image(image: AssetImage('images/food.png')),
+                            child: Image(image: AssetImage('images/raita.jpg')),
                           ),
                         ),
                         Padding(
                           padding: const EdgeInsets.all(15.0),
                           child: Container(
-                            child: Image(image: AssetImage('images/food.png')),
+                            child: Image(image: AssetImage('images/salad.jpg')),
                           ),
                         ),
-                        Padding(
-                          padding: const EdgeInsets.all(15.0),
-                          child: Container(
-                            child: Image(image: AssetImage('images/food.png')),
-                          ),
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.all(15.0),
-                          child: Container(
-                            child: Image(image: AssetImage('images/food.png')),
-                          ),
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.all(15.0),
-                          child: Container(
-                            child: Image(image: AssetImage('images/food.png')),
-                          ),
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.all(15.0),
-                          child: Container(
-                            child: Image(image: AssetImage('images/food.png')),
-                          ),
-                        ),
+                        
                       ],
                     ),
                   ),
@@ -304,7 +273,7 @@ class _biryani_descriptionState extends State<biryani_description> {
                         children: [
                           Padding(
                             padding: const EdgeInsets.all(10.0),
-                            child: Text('₹500'),
+                            child: Text((250*count).toString(),style: TextStyle(fontWeight: FontWeight.bold),),
                           ),
                           Container(
                             decoration: BoxDecoration(
@@ -315,14 +284,20 @@ class _biryani_descriptionState extends State<biryani_description> {
                             height: 40,
                             child: Row(
                               children: [
-                                TextButton(onPressed: () {}, child: Text('-')),
-                                Text('1'),
-                                TextButton(onPressed: () {}, child: Text('+')),
+                                TextButton(onPressed: () {setState(() {
+                                  if (count>1) {
+                                    count--;
+                                  } 
+                                });}, child: Text('-')),
+                                Text(count.toString()),
+                                TextButton(onPressed: () {setState(() {
+                                  count++;
+                                });}, child: Text('+')),
                               ],
                             ),
                           ),
                           IconButton(
-                              onPressed: () {}, icon: Icon(Icons.shopping_bag))
+                              onPressed: () {Navigator.pushNamed(context, wishlist_page.id);}, icon: Icon(Icons.shopping_bag),)
                         ],
                       ),
                     ),
@@ -336,7 +311,7 @@ class _biryani_descriptionState extends State<biryani_description> {
             left: 20,
             child: Container(
               height: 50,
-              width: 140,
+              width: 150,
               decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(20), color: Colors.white),
               child: Row(
@@ -363,11 +338,7 @@ class _biryani_descriptionState extends State<biryani_description> {
             top: 300,
             right: 15,
             child: Container(
-              child: Icon(
-                Icons.favorite_border_rounded,
-                size: 40,
-                color: const Color.fromARGB(255, 255, 254, 252),
-              ),
+              child:LikeButton(),
             ),
           ),
           Positioned(
@@ -385,7 +356,7 @@ class _biryani_descriptionState extends State<biryani_description> {
                 style: TextStyle(
                     fontSize: 25,
                     fontWeight: FontWeight.bold,
-                    color: const Color.fromARGB(255, 0, 0, 0)),
+                    color: const Color.fromARGB(255, 0, 0, 0),),
               )),
             ),
           ),

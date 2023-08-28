@@ -48,19 +48,12 @@ class _preferre_menuState extends State<preferre_menu> {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     dish_button(
-                        image: 'images/biryani.jpg',
+                        image: 'images/dosa.jpg',
                         onTap: () {
-                          Navigator.pushNamed(context, idli_page.id);
+                          
                         },
-                        dish_name: 'Biryani'),
-                    Container(
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(20),
-                        color: Colors.grey,
-                      ),
-                      height: 250,
-                      width: 150,
-                    ),
+                        dish_name: 'Dosa'),
+                    dish_button(image: 'images/dal makhani 1.jpg', onTap: (){}, dish_name: 'Dal Makhani'),
                   ],
                 ),
               ),

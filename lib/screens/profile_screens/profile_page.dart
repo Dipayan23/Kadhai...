@@ -19,8 +19,8 @@ class _profile_pageState extends State<profile_page> {
           begin: Alignment.topCenter,
           end: Alignment.bottomCenter,
           colors: [
-            Color.fromARGB(255, 252, 204, 10),
-            Color.fromARGB(255, 243, 160, 17)
+            Colors.orange,
+            Colors.orange,
           ],
         ),
       ),
@@ -33,10 +33,14 @@ class _profile_pageState extends State<profile_page> {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Text(
-                    'Profile',
-                    style: TextStyle(
-                      fontSize: 25,
+                  Padding(
+                    padding: const EdgeInsets.only(left: 20.0),
+                    child: Text(
+                      'Profile',
+                      style: TextStyle(
+                        fontSize: 25,
+                        fontWeight: FontWeight.bold,
+                      ),
                     ),
                   ),
                   Image.asset(
@@ -56,9 +60,7 @@ class _profile_pageState extends State<profile_page> {
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
                   CircleAvatar(
-                    backgroundImage: AssetImage(
-                      'images/kadhai.png',
-                    ),
+                    backgroundImage: AssetImage('images/avatar.jpg'),
                     radius: 75,
                   ),
                   Column(
@@ -92,7 +94,7 @@ class _profile_pageState extends State<profile_page> {
                       padding: const EdgeInsets.all(10.0),
                       child: Container(
                         decoration: BoxDecoration(
-                            color: Colors.grey,
+                            color: Colors.white,
                             borderRadius: BorderRadius.circular(15)),
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -115,7 +117,7 @@ class _profile_pageState extends State<profile_page> {
                       padding: const EdgeInsets.all(10.0),
                       child: Container(
                         decoration: BoxDecoration(
-                            color: Colors.grey,
+                            color: Colors.white,
                             borderRadius: BorderRadius.circular(15)),
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -138,7 +140,7 @@ class _profile_pageState extends State<profile_page> {
                       padding: const EdgeInsets.all(10.0),
                       child: Container(
                         decoration: BoxDecoration(
-                            color: Colors.grey,
+                            color: Colors.white,
                             borderRadius: BorderRadius.circular(15)),
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,

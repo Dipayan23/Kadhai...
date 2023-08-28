@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:kadhai/components/NavBar.dart';
+import 'package:kadhai/screens/main_screens/Meal_menu.dart';
 import 'package:kadhai/screens/main_screens/discount_page.dart';
 import 'package:kadhai/screens/main_screens/preferre_menu.dart';
 import 'package:kadhai/screens/profile_screens/wishlist_page.dart';
@@ -131,7 +132,7 @@ class _main_pageState extends State<main_page> {
                             child: ClipRRect(
                               borderRadius: BorderRadius.circular(30),
                               child: Image.asset(
-                                'images/food.png',
+                                'images/f1.jpg',
                               ),
                             ),
                           ),
@@ -182,8 +183,7 @@ class _main_pageState extends State<main_page> {
                 ),
                 TextButton(
                   onPressed: () {
-                    Navigator.pushNamed(context, preferre_menu.id);
-                  },
+                    Navigator.pushNamed(context, meal_menu.id);},
                   child: Container(
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
@@ -197,7 +197,7 @@ class _main_pageState extends State<main_page> {
                             child: ClipRRect(
                               borderRadius: BorderRadius.circular(30),
                               child: Image.asset(
-                                'images/food.png',
+                                'images/f2.jpg',
                               ),
                             ),
                           ),
@@ -263,7 +263,7 @@ class _main_pageState extends State<main_page> {
                             child: ClipRRect(
                               borderRadius: BorderRadius.circular(30),
                               child: Image.asset(
-                                'images/food.png',
+                                'images/f3.jpg',
                               ),
                             ),
                           ),

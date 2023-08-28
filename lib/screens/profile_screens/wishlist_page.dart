@@ -51,14 +51,17 @@ class _wishlist_pageState extends State<wishlist_page> {
                         child: Column(
                           children: [
                             Padding(
-                              padding: const EdgeInsets.all(15.0),
-                              child: Image.asset(
-                                'images/food1.jpg',
-                                scale: 15,
+                              padding: const EdgeInsets.all(30.0),
+                              child: ClipRRect(
+                                borderRadius: BorderRadius.circular(20),
+                                child: Image.asset(
+                                  'images/biryani2.jpg',
+                                  scale: 1,
+                                ),
                               ),
                             ),
                             SizedBox(
-                              height: 10,
+                              height: 20,
                             ),
                             Row(
                               mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -71,7 +74,7 @@ class _wishlist_pageState extends State<wishlist_page> {
                                   width: 130,
                                   child: Center(
                                     child: Text(
-                                      'Allen\'s Kitchen',
+                                      'Appna Rasoi',
                                       style: TextStyle(
                                           fontSize: 15,
                                           fontWeight: FontWeight.bold),

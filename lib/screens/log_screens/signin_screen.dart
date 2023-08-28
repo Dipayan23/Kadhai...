@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:kadhai/components/Sign_up_button.dart';
 import 'package:kadhai/components/get_OTP_button.dart';
 import 'package:kadhai/components/textfield.dart';
-import 'package:kadhai/screens/log_screens/signUp_screen.dart';
+
 import 'package:kadhai/screens/log_screens/verification_screen.dart';
 
 class signin_page extends StatefulWidget {
@@ -70,17 +70,10 @@ class _signin_pageState extends State<signin_page> {
                 height: 60,
               ),
               //Sign Up button
-              Align(
-                alignment: Alignment.bottomCenter,
-                child: Container(
-                  alignment: Alignment.bottomCenter,
-                  child: signUp_button(
-                    onTap: () {
-                      Navigator.pushNamed(context, signUp_screen.id);
-                    },
-                  ),
-                ),
-              )
+              Image(
+                image: AssetImage('images/kolkata.png'),
+                fit: BoxFit.fitHeight,
+              ),
             ],
           ),
         ),

@@ -18,7 +18,7 @@ class _disount_pageState extends State<disount_page> {
         gradient: LinearGradient(
           begin: Alignment.topCenter,
           end: Alignment.bottomCenter,
-          colors: [Colors.orange, Colors.white],
+          colors: [Colors.orange, Color.fromARGB(255, 242, 210, 3)],
         ),
       ),
       child: Scaffold(
@@ -26,7 +26,7 @@ class _disount_pageState extends State<disount_page> {
         backgroundColor: Colors.transparent,
         appBar: AppBar(
             backgroundColor: Colors.transparent,
-            title: Center(child: Text('Welcome')),
+            title: Center(child: Text('Discount Offers')),
             actions: [
               IconButton(
                   onPressed: () {
@@ -60,7 +60,7 @@ class _disount_pageState extends State<disount_page> {
                             child: ClipRRect(
                               borderRadius: BorderRadius.circular(30),
                               child: Image.asset(
-                                'images/food.png',
+                                'images/50.jpg',
                               ),
                             ),
                           ),
@@ -109,7 +109,7 @@ class _disount_pageState extends State<disount_page> {
                             child: ClipRRect(
                               borderRadius: BorderRadius.circular(30),
                               child: Image.asset(
-                                'images/food.png',
+                                'images/buy1.jpg',
                               ),
                             ),
                           ),
@@ -158,7 +158,7 @@ class _disount_pageState extends State<disount_page> {
                             child: ClipRRect(
                               borderRadius: BorderRadius.circular(30),
                               child: Image.asset(
-                                'images/food.png',
+                                'images/30.jpg',
                               ),
                             ),
                           ),
